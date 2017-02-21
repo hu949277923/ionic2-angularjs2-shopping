@@ -1,0 +1,16 @@
+<cm-header [HEADER]="HEADER" ></cm-header>
+<ion-content>
+  <div class="pay-monkey">
+    <ion-icon ios="ios-checkmark-circle" md="md-checkmark-circle"></ion-icon>
+    <p>支付方式：支付宝支付</p>
+    <p>订单金额：<span class="price">￥100.00</span></p>
+  </div>
+  <div class="pay-address">
+    <p><span>收货人:</span>张老三    18812346666</p>
+    <p><span>收货地址:</span>吉林省长春市经济开发区中山路1号</p>
+  </div>
+  <ion-buttons class="btn">
+    <button ion-button (touchstart)="openBuyOrderList()">查看订单</button>
+    <button ion-button color="secondary">返回首页</button>
+  </ion-buttons>
+</ion-content>

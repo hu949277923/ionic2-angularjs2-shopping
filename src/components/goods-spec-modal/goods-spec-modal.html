@@ -1,0 +1,135 @@
+<ion-header>
+  <ion-icon name="ios-close-circle-outline" (click)="closeSpecModal()"  data-tap-disabled="true" class="closeBtn"></ion-icon>
+</ion-header>
+
+<ion-content>
+  <ion-card  class="card">
+    <ion-item class="item">
+      <ion-avatar item-left>
+        <img src="assets/img/500-500.png" >
+      </ion-avatar>
+      <h2>商品名称商品名称商品名称商
+        称最多显示2行...</h2>
+      <p>￥100.00-￥120.00</p>
+    </ion-item>
+  </ion-card>
+  <!--主规格-->
+  <div class="main-spec clearfix">
+    <button ion-button icon-left class="btn left">
+      <ion-icon name="arrow-back"  color="dark2"></ion-icon>
+    </button>
+    <div class="list" >
+      <ul class="items">
+      <li>
+        灰色
+        <em>5</em>
+      </li>
+        <li>
+          灰白色
+          <em>5</em>
+        </li>
+        <li>
+          灰绿色
+          <em>5</em>
+        </li>
+        <li>
+          灰色
+          <em>5</em>
+        </li>
+      <li>
+        绿色
+        <em>5</em>
+      </li>
+      <li>
+        蓝色
+        <em>5</em>
+      </li>
+      <li>
+        其他
+        <em>5</em>
+      </li>
+    </ul>
+    </div>
+    <button ion-button icon-right  class="btn right">
+      <ion-icon name="arrow-forward" color="dark2"></ion-icon>
+    </button>
+  </div>
+  <!--end 主规格-->
+  <!--次规格-->
+  <div class="spec-list">
+    <ul>
+      <li>
+        <ion-row>
+          <ion-col class="attr">
+            内吸式
+          </ion-col>
+          <ion-col class="inventory">
+            库存：999999
+          </ion-col>
+          <ion-col class="operate-col">
+              <cm-plus-minus></cm-plus-minus>
+          </ion-col>
+        </ion-row>
+      </li>
+      <li>
+        <ion-row>
+          <ion-col class="attr">
+            内吸式
+          </ion-col>
+          <ion-col class="inventory">
+            库存：999999
+          </ion-col>
+          <ion-col  class="operate-col">
+            <cm-plus-minus></cm-plus-minus>
+            <!--<input type="number" class="number" value="0">
+            <span  class="minus">－</span>
+            <span href="javascript:;" class="plus">＋</span>-->
+          </ion-col>
+        </ion-row>
+      </li>
+      <li>
+        <ion-row>
+          <ion-col class="attr">
+            内吸式
+          </ion-col>
+          <ion-col class="inventory">
+            库存：999999
+          </ion-col>
+          <ion-col  class="operate-col">
+            <cm-plus-minus></cm-plus-minus>
+            <!--<input type="number" class="number" value="0">
+            <span  class="minus">－</span>
+            <span href="javascript:;" class="plus">＋</span>-->
+          </ion-col>
+        </ion-row>
+      </li>
+      <li>
+        <ion-row>
+          <ion-col class="attr">
+            内吸式
+          </ion-col>
+          <ion-col class="inventory">
+            库存：999999
+          </ion-col>
+          <ion-col  class="operate-col">
+            <cm-plus-minus></cm-plus-minus>
+            <!--<input type="number" class="number" value="0">
+            <span  class="minus">－</span>
+            <span href="javascript:;" class="plus">＋</span>-->
+          </ion-col>
+        </ion-row>
+      </li>
+    </ul>
+  </div>
+  <!--end 次规格-->
+</ion-content>
+<ion-footer>
+  <ion-row>
+    <ion-col text-right>
+      共<span>5</span>件 <span>￥300.00</span>
+    </ion-col>
+  </ion-row>
+  <ion-toolbar>
+    <button ion-button full color="primary" (click)="openOrderConfirm()"  data-tap-disabled="true">立即购买</button>
+  </ion-toolbar>
+</ion-footer>

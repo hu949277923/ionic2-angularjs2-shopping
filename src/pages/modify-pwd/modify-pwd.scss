@@ -1,0 +1,33 @@
+page-modify-pwd {
+  ion-content{
+    background-color: white;
+    top: 60px;
+    .scroll-content{
+      background-color: white;
+      .item-block{
+        background-color: white;
+        .item-inner{
+          background-color: white;
+          .input-wrapper{
+            .ion-eye-lab{
+              background-color: white;
+              position: absolute;
+              right: 0.5rem;
+            }
+            .icon-ios{
+              font-size: 1.8em;
+            }
+          }
+        }
+      }
+
+      .log-btn{
+        width: 100%;
+        text-align: center;
+        button{
+          width: 90%;
+        }
+      }
+    }
+  }
+}

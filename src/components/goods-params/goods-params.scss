@@ -1,0 +1,21 @@
+cm-goods-params {
+  .goods-params {
+    padding-top: 1rem;
+    background-color: #fff;
+    padding-bottom: 5rem;
+    ion-row {
+      border-top: 1px solid  map-get($colors,borderColor);
+      .key, .val {
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.8rem;
+      }
+      .key {
+        border-right: 1px solid  map-get($colors,borderColor);
+      }
+      &:last-child {
+        border-bottom: 1px solid  map-get($colors,borderColor);
+      }
+    }
+  }
+}

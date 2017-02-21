@@ -1,0 +1,31 @@
+page-feed-back{
+  ion-content{
+    background-color: white;
+    top: 60px;
+    .scroll-content{
+      background-color: white;
+      .ctt-div{
+         background-color: white;
+         width: 94%;
+         height: 80%;
+         margin: 3%;
+          .input-ios{
+            height:100%;
+            width: 100%;
+            border: 1px solid map-get($colors, borderColor);
+            padding: 5px;
+          }
+        }
+      }
+  }
+  ion-footer{
+    .log-btn{
+      width: 100%;
+      text-align: center;
+      button{
+        width: 90%;
+      }
+    }
+  }
+}
+

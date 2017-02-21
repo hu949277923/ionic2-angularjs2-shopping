@@ -1,0 +1,124 @@
+<cm-header [HEADER]="HEADER" ></cm-header>
+<ion-content class="content">
+  <!--收货地址-->
+  <ion-toolbar class="address" (touchstart)="openAddressList()">
+    <ion-buttons left>
+      <button ion-button color="dark2">
+        <em class="icon-positioning"></em>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      <p><span>张老三</span><span>151036767989</span></p>
+      <p>北京 北京市 丰台区 大红门街道康泽园小区15号楼1503
+      </p>
+    </ion-title>
+    <ion-buttons right>
+      <button ion-button color="dark2">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+  <!--end 收货地址-->
+  <div class="order-list">
+    <ion-card  class="card shop-item">
+      <h1>莱思达官方旗舰店</h1>
+      <div class="goods-item">
+        <ion-item class="item">
+          <ion-avatar item-left>
+            <img src="../assets/img/500-500.png" >
+          </ion-avatar>
+          <h2>欧式吸顶灯全铜灯具led美式客厅灯中式卧
+            室灯餐厅灯阳台灯玄关灯…</h2>
+          <!--没有规格显示区域-->
+          <p class="price">￥100.00</p>
+          <p class="num">×5</p>
+          <!--end 没有规格显示区域-->
+        </ion-item>
+        <!--有规格显示区域-->
+        <ul>
+          <li>
+            <div class="spec-list">
+              <dl>
+                <dd>颜色：灰色</dd>
+                <dd>尺码：XL</dd>
+              </dl>
+            </div>
+            <div class="item">
+              <p class="price">￥100.00</p>
+              <p class="num">×5</p>
+            </div>
+          </li>
+          <li>
+            <div class="spec-list">
+              <dl>
+                <dd>颜色：灰色</dd>
+                <dd>尺码：XL</dd>
+              </dl>
+            </div>
+            <div class="item">
+              <p class="price">￥100.00</p>
+              <p class="num">×5</p>
+            </div>
+          </li>
+        </ul>
+        <!--end 有规格显示区域-->
+      </div>
+      <div class="goods-item">
+        <ion-item class="item">
+          <ion-avatar item-left>
+            <img src="../assets/img/500-500.png" >
+          </ion-avatar>
+          <h2>欧式吸顶灯全铜灯具led美式客厅灯中式卧
+            室灯餐厅灯阳台灯玄关灯…</h2>
+          <p class="price">￥100.00</p>
+          <p class="num">×5</p>
+        </ion-item>
+        <ul>
+          <li>
+            <div class="spec-list">
+              <dl>
+                <dd>颜色：灰色</dd>
+                <dd>尺码：XL</dd>
+              </dl>
+            </div>
+            <div class="item">
+              <p class="price">￥100.00</p>
+              <p class="num">×5</p>
+            </div>
+          </li>
+          <li>
+            <div class="spec-list">
+              <dl>
+                <dd>颜色：灰色</dd>
+                <dd>尺码：XL</dd>
+              </dl>
+            </div>
+            <div class="item">
+              <p class="price">￥100.00</p>
+              <p class="num">×5</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="total">
+        <p class="key">物流费用</p>
+        <p class="val">￥0.00</p>
+      </div>
+      <div class="total">
+        <ion-icon name="close" *ngIf="desc" (click)="clearDesc()"></ion-icon>
+        <ion-item>
+          <ion-label fixed>补充说明</ion-label>
+          <ion-textarea maxlength="100" [(ngModel)]="desc" placeholder="选填：对本次交易的说明" ></ion-textarea>
+        </ion-item>
+      </div>
+      <div class="total">
+        <p class="key"></p>
+        <p class="val"><span class="price-key">总价：</span><span class="price-val">￥100.00</span></p>
+      </div>
+    </ion-card>
+  </div>
+  <ion-buttons class="pay">
+    <button ion-button block outline (click)="goPay()">支付宝支付</button>
+  </ion-buttons>
+</ion-content>
+

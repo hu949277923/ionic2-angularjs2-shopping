@@ -1,0 +1,43 @@
+page-buyer-member-manage{
+  ion-content{
+    top:60px;
+    .scroll-content{
+      .list-ios{
+        margin-bottom: 12px;
+        .item-block {
+          background-color: #ffffff;
+          color: map-get($colors, secondary);
+          font-size: 16px;
+          font-weight: 500;
+          .meb-inf{
+            text-align: right;
+          }
+          .meb-inf-pwd{
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  ion-footer{
+    .list-ios{
+      margin-bottom: 12px;
+      text-align: center;
+      .item-block {
+        background-color: #ffffff;
+        .label-ios{
+          text-align: center;
+          color: map-get($colors, secondary);
+          font-size: 16px;
+          font-weight: 500;
+        }
+        .exi-lab{
+          color: map-get($colors, primary);
+        }
+      }
+    }
+    .cel-lis{
+      margin-bottom: 0px;
+    }
+  }
+}

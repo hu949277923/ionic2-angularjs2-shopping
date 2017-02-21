@@ -1,0 +1,69 @@
+page-buyer-address-edit {
+  ion-header {
+    ion-title { padding: 0 50px 1px !important;  }
+    .toolbar { height: 4rem;}
+    .toolbar-title {text-align: left;}
+    .button-inner { font-size: 3rem;}
+    .ion-del-lab{
+      position: absolute;
+      right: 5px;
+      margin: 0px;
+      top:10px;
+      .icon-ios{
+        font-size: 2.2em;
+        color: #ffffff;
+      }
+    }
+  }
+  ion-content{
+    background-color: white;
+    top: 60px;
+    .scroll-content{
+      background-color: white;
+      .log-div{
+        .label-ios{
+          text-align: center;
+          .log-img{
+          }
+        }
+      }
+      .item-block{
+        background-color: white;
+        .item-inner{
+          background-color: white;
+          .input-wrapper{
+            .label-ios{
+              color: #7f7f7f;
+            }
+            .input-ios{
+              font-size: 1.7rem;
+            }
+            .add-sel{
+              position: absolute;
+              right: 5px;
+              a{
+                color: #7f7f7f;
+              }
+            }
+           .add-dft{
+             position: absolute;
+             right: 5px;
+             .toggle-ios{
+               padding: 0px;
+             }
+           }
+          }
+        }
+      }
+    }
+  }
+  ion-footer{
+    .log-btn{
+      width: 100%;
+      text-align: center;
+      button{
+        width: 90%;
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+<cm-header [HEADER]="HEADER" ></cm-header>
+<ion-content class="buyer-order-list list">
+  <!--列表-->
+  <!--<ion-content class="">-->
+    <!--物流公司-->
+    <ion-toolbar class="address">
+      <ion-buttons left>
+        <button ion-button color="dark2">
+          <em class="icon-logistics"></em>
+        </button>
+      </ion-buttons>
+      <ion-title>
+        <p><span>物流公司：</span><span>顺丰</span></p>
+        <p><span>物流编号：</span><span>4545987651</span>
+        </p>
+      </ion-title>
+    </ion-toolbar>
+    <!--end 物流公司-->
+    <!--收货地址-->
+    <ion-toolbar class="address">
+      <ion-buttons left>
+        <button ion-button color="dark2">
+          <em class="icon-positioning"></em>
+        </button>
+      </ion-buttons>
+      <ion-title>
+        <p><span>张老三</span><span>151036767989</span></p>
+        <p>北京 北京市 丰台区 大红门街道康泽园小区15号楼1503
+        </p>
+      </ion-title>
+    </ion-toolbar>
+    <!--end 收货地址-->
+    <!--补充说明-->
+    <ion-toolbar class="address">
+      <ion-buttons left>
+        <button ion-button color="dark2">
+          <em class="icon-desc"></em>
+        </button>
+      </ion-buttons>
+      <ion-title>
+        <p><span>补充说明：</span><span>补充说明补充说明补充说明补充说明补充说明补充说明补充说明补充说明</span></p>
+      </ion-title>
+    </ion-toolbar>
+    <!--end 物流公司-->
+    <div class="order-list">
+      <ion-card  class="card shop-item">
+        <div class="total order-item">
+          <p class="key">商品信息</p>
+        </div>
+        <div class="goods-item">
+          <ion-item class="item">
+            <ion-avatar item-left>
+              <img src="../assets/img/500-500.png" >
+            </ion-avatar>
+            <h2>欧式吸顶灯全铜灯具led美式客厅灯中式卧
+              室灯餐厅灯阳台灯玄关灯…</h2>
+            <!--没有规格显示区域-->
+            <!--<p class="price">￥100.00</p>
+            <p class="num">×5</p>-->
+            <!--end 没有规格显示区域-->
+          </ion-item>
+          <!--有规格显示区域-->
+          <ul>
+            <li>
+              <div class="spec-list">
+                <dl>
+                  <dd>颜色：灰色</dd>
+                  <dd>尺码：XL</dd>
+                </dl>
+              </div>
+              <div class="item">
+                <p class="price">￥100.00</p>
+                <p class="num">×5</p>
+              </div>
+            </li>
+            <li>
+              <div class="spec-list">
+                <dl>
+                  <dd>颜色：灰色</dd>
+                  <dd>尺码：XL</dd>
+                </dl>
+              </div>
+              <div class="item">
+                <p class="price">￥100.00</p>
+                <p class="num">×5</p>
+              </div>
+            </li>
+          </ul>
+          <!--end 有规格显示区域-->
+        </div>
+        <div class="total order-item">
+          <p>共7件商品 合计:<span class="sum">700.00</span>(含运费￥0.00)</p>
+        </div>
+        <div class="total order-item clearBtm">
+          <p><span>实付款:</span><span class="price">￥500.00</span></p>
+        </div>
+        <div class="total order-item clearTop clearBtm">
+          <p>下单时间：2016-09-05  20:18:22</p>
+        </div>
+        <ion-buttons class="call-buy-btn">
+          <button ion-button icon-left  full  (click)="openCallSeller()"  data-tap-disabled="true">
+            <em class="icon-call"></em>
+            联系卖家
+          </button>
+        </ion-buttons>
+        <div class="total order-item">
+          <p class="key">实现方式</p>
+          <p class="val">支付宝</p>
+        </div>
+      </ion-card>
+    </div>
+  <!--</ion-content>-->
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col width-75>
+        <p>收货剩余时间:</p>
+        <p>2天8小时60分钟</p>
+      </ion-col>
+      <ion-col width-25>
+        <button ion-button>操作</button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,143 @@
+page-order-confirm {
+  .scroll-content {
+    top: 4rem;
+    .address {
+      height:8rem;
+      border-bottom: 2px solid map_get($colors, primary);
+      .toolbar-background {
+        border: 0;
+      }
+      ion-title {
+        padding: 0 40px 1px;
+        p {
+          text-align: left;
+          white-space:initial;
+          padding-bottom: 0;
+          margin-bottom: 0;
+          margin-top: .5rem;
+          font-weight: 500;
+          color: map_get($colors, secondary)
+        }
+      }
+      .icon-positioning {
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        background: url("../assets/images/icon_location.png") no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    .order-list {
+      background-color: #fff;
+      padding: 0 1rem;
+      margin-top: 1rem;
+      ion-card {
+        margin:0;
+        width: auto;
+        background-color: #fff;
+        border: 0;
+        box-shadow: none;
+        img {
+          border-radius:0;
+          max-width: 7rem;
+          max-height: 7rem;
+        }
+        h1 {
+          font-size: 1.8rem;
+          font-weight: 500;
+          padding: 1rem 0;
+          border-bottom: 1px solid  map_get($colors, borderColor);
+        }
+        h2 {
+          white-space:initial;
+          font-size: 1.5rem;
+        }
+
+        p {
+          text-align: right;
+          line-height: 1.8rem;
+          margin:0;
+          &.price {
+            color:  map_get($colors, primary);
+            font-size: 1.7rem;
+          }
+          &.num {
+            color:  map_get($colors, dark2);
+            font-size: 1.3rem;
+          }
+        }
+        ion-item {
+          background-color: #fff;
+          padding-left: 0;
+        }
+        ul {
+          li {
+            display: -webkit-box;
+            background-color:  map_get($colors, dark3);
+            margin-bottom: 1rem;
+            padding: 1rem;
+            dl {
+              dd {
+                color:  map_get($colors, dark2);
+                font-size: 1.3rem;
+                line-height: 1.8rem;
+              }
+            }
+            .spec-list, .item {
+              -webkit-box-flex: 1;
+              width: 50%;
+            }
+          }
+        }
+        .total {
+          position: relative;
+          border-top:1px solid map_get($colors, borderColor);
+          display: -webkit-box;
+          padding: 1rem;
+          ion-icon {
+            position: absolute;
+            right: 1rem;
+            bottom: 0;
+            font-size: 4rem;
+            z-index: 9;
+            color:map_get($colors, dark);
+          }
+          ion-label {
+            color:map_get($colors, secondary);
+          }
+          p {
+            width:50%;
+            box-flex:1;
+            &.key {
+              text-align: left;
+              color:map_get($colors, secondary);
+              font-size: 1.7rem;
+            }
+            &.val {
+              text-align: right;
+              color:map_get($colors, dark);
+              font-size: 1.5rem;
+              .price-key {
+                font-size: 2rem;
+                color:map_get($colors, secondary);
+              }
+              .price-val {
+                font-size: 1.8rem;
+                color:map_get($colors, primary);
+              }
+            }
+          }
+        }
+      }
+    }
+    ion-buttons.pay {
+      padding: 1rem;
+      background-color: #fff;
+      button {
+        background-color:  map_get($colors, primary);
+        color: #fff;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,41 @@
+<cm-header [HEADER]="HEADER" ></cm-header>
+<ion-content class="goods-list-content">
+
+  <!--排序-->
+  <ion-segment  class="sort" >
+    <ion-segment-button value="默认" class="segment-activated" >
+      默认
+    </ion-segment-button>
+    <ion-segment-button value="销量" >
+      销量
+    </ion-segment-button>
+    <ion-segment-button value="价格" class="g-icon-sort icon-sort-asc" (click)="sortPrice()" data-tap-disabled="true">
+      价格<em *ngIf="!isPriceAsc" class="icon-sort-des"></em>
+      <em *ngIf="isPriceAsc" class="icon-sort-des icon-sort-asc"></em>
+    </ion-segment-button>
+  </ion-segment>
+  <!--end 排序-->
+  <!--列表-->
+  <ion-content class="list">
+    <!--下拉刷新-->
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <!--end 下拉刷新-->
+    <ion-card  class="card" *ngFor="let key of list"  data-tap-disabled="true" (click)="openGoodsDetail(key.id)"  data-tap-disabled="true">
+      <ion-item class="item">
+        <ion-avatar item-left>
+          <img [src]="key.url">
+        </ion-avatar>
+        <h2>{{key.title}}</h2>
+        <p>￥{{key.price}}</p>
+      </ion-item>
+    </ion-card>
+    <!--无线滚动-->
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content  loadingSpinner="bubbles"
+                                    loadingText="加载更多数据"></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+    <!--end：无线滚动-->
+  </ion-content>
+</ion-content>

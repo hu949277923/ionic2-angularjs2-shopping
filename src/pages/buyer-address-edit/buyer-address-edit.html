@@ -1,0 +1,40 @@
+<ion-header no-shadow>
+  <ion-navbar color="primary" hideBackButton>
+    <ion-buttons start *ngIf="HEADER.isShowBack">
+      <button ion-button (click )="back()"  data-tap-disabled="true">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>{{ HEADER.title }}</ion-title>
+    <ion-label class="ion-del-lab"><ion-icon name="trash"></ion-icon></ion-label>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>收货人姓名:</ion-label>
+    <ion-input type="text" value="张老三"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>联系电话:</ion-label>
+    <ion-input type="text" value="15110205599"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>所在地区:</ion-label>
+    <ion-input type="text" value="北京市东城区"></ion-input>
+    <ion-label class="add-sel"><a>请选择 > </a></ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>详细地址:</ion-label>
+    <ion-input type="text" value="胜古中路"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>设为默认地址:</ion-label>
+    <ion-label  class="add-dft"><ion-toggle checked="false"></ion-toggle></ion-label>
+  </ion-item>
+</ion-content>
+<ion-footer>
+  <div class="log-btn">
+    <button ion-button color="primary">保存</button>
+  </div>
+</ion-footer>

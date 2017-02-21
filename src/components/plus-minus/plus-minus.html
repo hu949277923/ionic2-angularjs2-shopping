@@ -1,0 +1,5 @@
+<div class="operate">
+  <ion-input type="number" class="number" [(ngModel)]="values" #num  (keyup)="onlyInputNumber(num.value)"></ion-input>
+  <span  class="minus" (touchstart)="minus()">－</span>
+  <span href="javascript:;" class="plus" (click)="plus()"  data-tap-disabled="true">＋</span>
+</div>

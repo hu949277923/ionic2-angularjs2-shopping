@@ -1,0 +1,64 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+/* 重置列表元素 */
+ul, ol, dl, dt, dd {
+  list-style: none; margin: 0; padding: 0; }
+
+.clearfix {
+  zoom: 1; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+.scroll-content { border: 0 !important;}
+ion-modal {
+  bottom: 0;
+  top: initial;
+  height: 60%;
+}
+.dialogBtnCls {
+  color: #007bfd !important;
+}
+
+// radio
+.radio-ios .radio-icon {
+  width: 21px;
+  height: 21px;
+  border:1px solid map_get($colors, borderColor);
+  border-radius: 50%;
+}
+.radio-ios .radio-checked {
+  border:1px solid map_get($colors, primary);
+  background-color: map_get($colors, primary);
+}
+.radio-ios .radio-checked .radio-inner {
+  border-color: #fff;
+  top: 3px;
+}
+a[disabled], button[disabled], [ion-button][disabled] {
+  cursor: default;
+  opacity: 1;
+  pointer-events: none;
+  background-color: map_get($colors, dark2);
+}
+

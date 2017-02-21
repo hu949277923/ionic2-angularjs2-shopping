@@ -1,0 +1,70 @@
+page-login {
+  ion-content{
+    background-color: white;
+    top: 60px;
+    .scroll-content{
+      background-color: white;
+      .log-div{
+        .label-ios{
+          text-align: center;
+          .log-img{
+          }
+        }
+      }
+      .item-block{
+        background-color: white;
+        .item-inner{
+          background-color: white;
+          .input-wrapper{
+            .input-ios{
+              font-size: 1.7rem;
+            }
+          }
+          .ion-eye-btn{
+            background-color: white;
+            position: absolute;
+            top:0;
+            right: 0.5rem;
+            line-height: 1.5;
+            .icon-ios{
+              background-color: white;
+              font-size: 2em;
+            }
+          }
+        }
+      }
+      .reg-pwd{
+        width: 100%;
+        height:100px;
+        padding: 10px;
+        background-color: white;
+        .reg-a-div{
+          width: 50%;
+          float: left;
+          a{
+            color:black;
+            font-size: 0.6rem;
+            color: map_get($colors, dark);
+          }
+        }
+        .pwd-a-div{
+          background-color: white;
+          width: 60px;
+          border-bottom: 1px solid #cb1e1e;
+          float: right;
+          text-align:right;
+          a{
+            font-size: 0.6rem;
+          }
+        }
+      }
+      .log-btn{
+        width: 100%;
+        text-align: center;
+        button{
+          width: 90%;
+        }
+      }
+    }
+  }
+}

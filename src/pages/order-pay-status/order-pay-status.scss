@@ -1,0 +1,49 @@
+page-order-pay-status {
+  ion-content {
+    top: 4rem;
+    background-color: #fff !important;
+    .pay-monkey {
+      position: relative;
+      width: 70%;
+      margin: 5rem auto 0 auto;
+      padding-left: 5rem;
+      ion-icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 6rem;
+        color: #3eaf0e;
+      }
+      p {
+        margin: 0;
+        padding: .8rem 0 0 0;
+        color:map_get($colors, secondary);
+        font-size: 1.8rem;
+        .price {
+          color:map_get($colors, primary);
+        }
+      }
+    }
+    .pay-address {
+      padding:5rem 2rem 0 2rem;
+      font-size: 1.7rem;
+      line-height: 2rem;
+      color:map_get($colors, secondary);
+      span {
+        color:map_get($colors, dark);
+      }
+    }
+    ion-buttons.btn {
+      text-align: center;
+      button {
+        padding: 0 3rem;
+        border:1px solid map_get($colors, primary);
+        background-color: #fff;
+        color: map_get($colors, primary);
+        &.activated {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}

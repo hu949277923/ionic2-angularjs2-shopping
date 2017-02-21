@@ -1,0 +1,51 @@
+page-buyer-address-list {
+  .content {
+    padding: 4rem 0;
+    ion-card {
+      margin-left: 0;
+      margin-right: 0;
+      width: auto;
+      box-shadow:none;
+      background-color: #fff;
+      .card-item {
+        padding: 0 1rem;
+      }
+      ion-item {
+        padding: 0 1rem;
+        background-color: #fff;
+        border-bottom: 1px solid map_get($colors, borderColor);
+        h2 {
+          margin-bottom: 1rem;
+        }
+      }
+      ion-row {
+        padding: 0 1rem;
+        ion-col {
+          position: relative;
+          padding: 0;
+          ion-radio {
+            padding: 1rem 0;
+          }
+          ion-label {
+            position: absolute;
+            left: 3rem;
+            top: 2px;
+          }
+          button.opeater {
+            background-color: #fff;
+            font-size: 1.3rem;
+            padding-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+  ion-footer {
+    ion-toolbar {
+      padding: 0 !important;
+      .button-full {
+        margin: 0 !important;
+      }
+    }
+  }
+}

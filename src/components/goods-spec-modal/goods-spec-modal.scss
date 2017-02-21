@@ -1,0 +1,137 @@
+cm-goods-spec-modal {
+  box-shadow:5px 5px 20px 10px rgba(0, 0, 0, 0.2);
+  ion-content {
+    background-color: #fff !important;
+    .card {
+      padding:1rem 0;
+      margin: 1rem 0 0 0;
+      width: auto;
+      background-color:#fff;
+      box-shadow:none;
+      border-bottom: 1px solid  map-get($colors,borderColor);
+      &:first-child {
+        border-top: 0;
+      }
+      .item {
+        background-color:#fff;
+        img { max-width: 8rem; max-height: 8rem;border-radius:0;}
+        .item-inner {
+          -webkit-align-items:flex-start;
+          align-items: flex-start;
+        }
+        ion-label {
+          white-space: inherit;
+          h2 {
+            font-size: 1.8rem;
+            color: map-get($colors,secondary);
+            white-space: inherit;
+          }
+          p {
+            font-size: 1.6rem;
+            line-height:3rem;
+            color: map-get($colors,primary);
+
+          }
+        }
+      }
+    }
+    .main-spec {
+      position: relative;
+      height: 4rem;
+      .btn {
+        width: 3rem;
+        height: 3rem;
+        line-height: 3rem;
+        background-color: #fff;
+        color: map-get($colors,dark2);
+        position: absolute;
+        margin: 0;
+        &.left {
+          left: 0;
+          top: 0;
+        }
+        &.right {
+          right: 0;
+          top: 0;
+        }
+      }
+      .list {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 0 3rem;
+        width: 100%;
+        box-sizing: border-box;
+        height: 3rem;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        .items {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          li {
+            float: left;
+            margin: 1rem;
+            font-size: 1.7rem;
+            position: relative;
+            color:  map-get($colors,secondary);
+            em {
+              display: block;
+              font-size: 1rem;
+              padding: 2px 5px;
+              position: absolute;
+              right: -15px;
+              top: -10px;
+              font-style: inherit;
+              border-radius: 50%;
+              background-color:  map-get($colors,primary);
+              color: #fff;
+            }
+          }
+        }
+      }
+
+    }
+    .spec-list {
+      border-top: 1px solid map_get($colors, borderColor);
+      li {
+        border-bottom: 1px solid map_get($colors, borderColor);
+        ion-row {
+          padding: 1rem;
+          .operate-col {
+            padding: 0;
+          }
+          .attr {
+            color: map_get($colors, dark);
+          }
+          .inventory {
+            color: map_get($colors, dark2);
+          }
+        }
+      }
+    }
+  }
+  ion-icon {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 3rem;
+    color: map_get($colors, primary);
+  }
+  ion-footer {
+    ion-row {
+      ion-col {
+        span {
+          color: map_get($colors, primary);
+        }
+      }
+    }
+
+    ion-toolbar {
+      padding: 0 !important;
+      .button-full {
+        margin: 0 !important;
+      }
+    }
+  }
+}

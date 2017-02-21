@@ -1,0 +1,29 @@
+<cm-header [HEADER]="HEADER" ></cm-header>
+<ion-content>
+  <div class="log-div">
+    <ion-label icon-only>
+      <img class="log-img" src="assets/images/logo.png">
+    </ion-label>
+  </div>
+  <form  (ngSubmit)="onSubmit()" #loginForm="ngForm" >
+    <ion-item>
+      <ion-label><ion-icon name="person"></ion-icon></ion-label>
+      <ion-input type="text" placeholder="手机号/用户名/邮箱" [(ngModel)]="username" required name="username" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label><ion-icon name="lock"></ion-icon></ion-label>
+      <!--<p *ngIf="myFunc()" [(ng-model)]="ifPwd">-->
+      <ion-input *ngIf="ifPwd == true" type="password" [(ngModel)]="password" required name="password"  placeholder="请输入密码"></ion-input>
+      <!--<p>-->
+      <ion-input *ngIf="ifPwd == false" type="text"  [(ngModel)]="password" required name="password"  placeholder="请输入密码"></ion-input>
+      <button item-right type="button" (click)="pwdShowHide()" data-tap-disabled="true" class="ion-eye-btn"><ion-icon name="eye"></ion-icon></button>
+    </ion-item>
+    <div class="reg-pwd">
+      <div class="reg-a-div"><ion-label><a (click)="registerPage()">免费注册</a></ion-label></div>
+      <div class="pwd-a-div"><ion-label><a (click)="forgetPwdPage()">忘记密码</a></ion-label></div>
+    </div>
+    <div class="log-btn">
+    <button ion-button type="submit" [disabled]="!loginForm.form.valid" color="primary">登录</button>
+    </div>
+  </form>
+</ion-content>

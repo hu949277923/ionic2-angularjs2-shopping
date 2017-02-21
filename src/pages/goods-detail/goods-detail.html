@@ -1,0 +1,82 @@
+<cm-header [HEADER]="HEADER" ></cm-header>
+<ion-content class="content">
+  <cm-sliders></cm-sliders>
+  <div class="bg-row">
+    <!--标题-->
+    <ion-row>
+      <ion-col>
+        <ion-title>财到真芯实木多层木门财到真芯实木多层木门木门烤漆套装 定制木门JO-022-J</ion-title>
+      </ion-col>
+    </ion-row>
+    <!--end 标题-->
+    <!--价格区间-->
+    <ion-row class="price-interval">
+      <ion-col>
+        <p class="price">￥100.00</p>
+        <p class="number">5-50台</p>
+      </ion-col>
+      <ion-col>
+        <p class="price">￥80.00</p>
+        <p class="number">50-200台</p>
+      </ion-col>
+      <ion-col>
+        <p class="price">￥60.00</p>
+        <p class="number">≥200台</p>
+      </ion-col>
+    </ion-row>
+    <!--end 价格区间-->
+  </div>
+  <!--无规格-->
+  <div class="bg-row no-spec">
+    <ion-row>
+      <ion-col>
+        <label>库存：</label>
+        <span class="inventory">20000</span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <label>数量：</label>
+        <cm-plus-minus></cm-plus-minus>
+      </ion-col>
+    </ion-row>
+  </div>
+  <!--end 无规格-->
+  <!--2种或1种规格-->
+  <!--<ion-item-divider class="spec" (touchstart)="openSpecModal()">
+    规格
+    <ion-icon name="arrow-forward" item-right></ion-icon>
+
+  </ion-item-divider>-->
+  <cm-goods-spec></cm-goods-spec>
+  <!--end 规格-->
+  <!--tab-->
+  <div class="tab">
+    <ion-segment  [(ngModel)]="pet">
+      <ion-segment-button value="商品介绍" >
+        商品介绍
+      </ion-segment-button>
+      <ion-segment-button value="商品参数" >
+        商品参数
+      </ion-segment-button>
+      <ion-segment-button value="售后服务" >
+        售后服务
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <div [ngSwitch]="pet">
+    <cm-goods-desc  *ngSwitchCase="'商品介绍'"></cm-goods-desc>
+    <cm-goods-params *ngSwitchCase="'商品参数'"></cm-goods-params>
+    <cm-goods-aftermarket *ngSwitchCase="'售后服务'"></cm-goods-aftermarket>
+  </div>
+  <!--end tab-->
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button class="call" (click)="openCallSeller()"  data-tap-disabled="true">
+      <em class="icon-call"></em>
+      <span>联系</span>
+    </button>
+    <button ion-button color="primary" (click)="openSpecModal()"  data-tap-disabled="true">立即购买</button>
+  </ion-toolbar>
+</ion-footer>

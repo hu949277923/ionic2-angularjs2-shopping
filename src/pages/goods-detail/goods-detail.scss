@@ -1,0 +1,169 @@
+page-goods-detail {
+  .scroll-content { top: 4rem; padding-bottom: 5rem;}
+  .bg-row { background-color: #fff; margin-top: -.5rem; margin-bottom: 1rem;}
+  ion-row {
+    background-color: #fff;
+    ion-col {
+      padding: 0 1rem 0 ;
+      .toolbar-title {
+        padding: 1rem 0 0 0;
+        text-align: left;
+        text-overflow: clip;
+        white-space: normal;
+        color: map-get($colors,secondary);
+        line-height: 1.8rem;
+        font-weight: 500;
+      }
+      p.price {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: map-get($colors, primary);
+      }
+      p.number {
+        font-size: 1.5rem;
+        color: map_get($colors, dark);
+      }
+    }
+    &.price-interval {
+      ion-col {
+        padding: 0 0 0 1rem;
+
+      }
+    }
+  }
+  .spec {
+    color: map_get($colors, dark);
+    background-color: #fff;
+  }
+  .no-spec {
+    padding: 1rem 0;
+    margin-top: 1rem;
+    ion-col {
+      display: -webkit-box;
+      label {
+        -webkit-box-flex: 1;
+      }
+      span, cm-plus-minus {-webkit-box-flex: 2; display: block;}
+      .operate {
+        width: 50%;
+      }
+    }
+    label, span.inventory {
+      color: map_get($colors, dark);
+      font-size: 1.7rem;
+      line-height: 2rem;
+    }
+
+  }
+  .tab {
+    padding-top: 1rem;
+    ion-segment {
+      background-color: #fff;
+      border-bottom: 1px solid map-get($colors, borderColor);
+      .segment-button {
+        height: 2.2rem;
+        line-height: 2.2rem;
+        margin: 1rem 0;
+        border: 0;
+        font-size: 1.7rem;
+        color: map-get($colors, secondary);
+        border-radius:0;
+        border-right: 1px solid map-get($colors, borderColor);
+        &:last-child {
+          border:0;
+        }
+        &.segment-activated {
+          background-color:transparent;
+          color: map-get($colors, primary);
+
+        }
+      }
+    }
+  }
+  ion-footer {
+    height:5rem;
+    border-top:1px solid  map_get($colors, borderColor);
+    background-color: #fff;
+    .toolbar-background {
+      background-color: #fff !important;
+    }
+    .toolbar {
+      height:5rem;
+      padding: 0 !important;
+      .toolbar-content {
+        height:5rem;
+      }
+    }
+    .button {
+      margin: 0;
+      height: 5rem;
+      border-radius: 0;
+      &:first-child {
+        width: 38%;
+        background-color: transparent;
+        &.call {
+          -webkit-box-flex:1;
+          font-size: 1.2rem;
+          line-height: 2rem;
+          text-align: center;
+          color: map_get($colors, dark);
+          .icon-call {
+            display: block;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: url("../assets/images/iconfont_contactseller.png") no-repeat;
+            background-size: 100% 100%;
+            margin: 1rem auto 0 auto;
+          }
+          span {
+            display: block;
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+      &:last-child {
+        float: right;
+        width: 60%;
+      }
+    }
+  }
+  .btn {
+    width:100%;
+    height:5rem;
+    z-index:100;
+    display:-webkit-box;
+    box-sizing: border-box;
+    background-color: #fff;
+    div {
+      &.call {
+        -webkit-box-flex:1;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        text-align: center;
+        color: map_get($colors, dark);
+        .icon-call {
+          display: block;
+          width: 1.5rem;
+          height: 1.5rem;
+          background: url("../assets/images/iconfont_contactseller.png") no-repeat;
+          background-size: 100% 100%;
+          margin: 1rem auto 0 auto;
+        }
+        p {
+          margin: 0;
+          padding: 0;
+        }
+      }
+      &.buy {
+        text-align: center;
+        line-height: 5rem;
+        color: #fff;
+        font-size: 1.7rem;
+        -webkit-box-flex:2;
+        background-color: map_get($colors, primary);
+      }
+    }
+
+  }
+}

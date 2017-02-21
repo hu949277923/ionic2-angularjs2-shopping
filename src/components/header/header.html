@@ -1,0 +1,10 @@
+<ion-header no-shadow>
+  <ion-navbar color="primary" hideBackButton>
+    <ion-buttons start *ngIf="HEADER.isShowBack">
+      <button ion-button (click)="back()"  data-tap-disabled="true">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>{{ HEADER.title }}</ion-title>
+  </ion-navbar>
+</ion-header>

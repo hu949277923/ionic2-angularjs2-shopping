@@ -1,0 +1,44 @@
+cm-plus-minus {
+  .operate {
+    position: relative;
+    margin-top: 2px;
+    span {
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      line-height: 2rem;
+      font-size: 1.6rem;
+      text-align: center;
+      background-color: map_get($colors, primary);
+      color: #fff;
+      &.minus {
+        left: 0;
+        top: 0;
+      }
+      &.plus {
+        right: 0;
+        top: 0;
+      }
+      &.active {
+        background-color: map_get($colors, borderColor);
+        color: map_get($colors, dark);
+      }
+    }
+
+    .number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 2rem;
+      padding: 0 2.5rem;
+      width: 100%;
+      text-align: center;
+      .text-input {
+        margin:0;
+        padding-right: 0;
+        line-height: 2rem;
+        text-align: center;
+      }
+    }
+  }
+}

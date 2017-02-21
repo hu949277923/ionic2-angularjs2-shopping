@@ -1,0 +1,12 @@
+cm-sliders {
+  ion-slides {
+    height: auto;
+  }
+  .swiper-pagination-bullet {
+    opacity: 1;
+    background-color: #fff;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: map-get($colors,primary);
+  }
+}

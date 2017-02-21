@@ -1,0 +1,319 @@
+<cm-header [HEADER]="HEADER" ></cm-header>
+<ion-content class="buyer-order-list">
+
+  <!--排序-->
+  <ion-segment  class="sort" >
+    <ion-segment-button value="全部" class="segment-activated" >
+      全部
+    </ion-segment-button>
+    <ion-segment-button value="待付款" >
+      待付款
+    </ion-segment-button>
+    <ion-segment-button value="待发货" >
+      待发货
+    </ion-segment-button>
+    <ion-segment-button value="待收货" >
+      待收货
+    </ion-segment-button>
+    <ion-segment-button value="交易成功" >
+      交易成功
+    </ion-segment-button>
+  </ion-segment>
+  <!--end 排序-->
+  <!--列表-->
+  <ion-content class="list">
+    <!--下拉刷新-->
+    <!--<ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>-->
+    <!--end 下拉刷新-->
+    <div class="order-list">
+      <ion-card  class="card shop-item">
+        <div (click)="openBuyOrderDetail()"  data-tap-disabled="true">
+          <div class="total order-item">
+            <p class="key">订单编号：20187777888</p>
+            <p class="val ">待付款</p>
+          </div>
+          <div class="goods-item">
+            <ion-item class="item">
+              <ion-avatar item-left>
+                <img src="../assets/img/500-500.png" >
+              </ion-avatar>
+              <h2>欧式吸顶灯全铜灯具led美式客厅灯中式卧
+                室灯餐厅灯阳台灯玄关灯…</h2>
+              <!--没有规格显示区域-->
+              <!--<p class="price">￥100.00</p>
+              <p class="num">×5</p>-->
+              <!--end 没有规格显示区域-->
+            </ion-item>
+            <!--有规格显示区域-->
+            <ul>
+              <li>
+                <div class="spec-list">
+                  <dl>
+                    <dd>颜色：灰色</dd>
+                    <dd>尺码：XL</dd>
+                  </dl>
+                </div>
+                <div class="item">
+                  <p class="price">￥100.00</p>
+                  <p class="num">×5</p>
+                </div>
+              </li>
+              <li>
+                <div class="spec-list">
+                  <dl>
+                    <dd>颜色：灰色</dd>
+                    <dd>尺码：XL</dd>
+                  </dl>
+                </div>
+                <div class="item">
+                  <p class="price">￥100.00</p>
+                  <p class="num">×5</p>
+                </div>
+              </li>
+            </ul>
+            <!--end 有规格显示区域-->
+          </div>
+          <div class="total order-item order-item-btm">
+            <p>共7件商品 合计:<span class="sum">700.00</span>(含运费￥0.00)</p>
+          </div>
+        </div>
+        <ion-buttons class="btn">
+          <button ion-button class="secondary" (click)="cancelOrder()"  data-tap-disabled="true">取消订单</button>
+          <button ion-button >付款</button>
+        </ion-buttons>
+      </ion-card>
+      <ion-card  class="card shop-item">
+        <div (click)="openBuyOrderDetail()"  data-tap-disabled="true">
+          <div class="total order-item">
+            <p class="key">订单编号：20187777888</p>
+            <p class="val ">待付款</p>
+          </div>
+          <div class="goods-item">
+            <ion-item class="item">
+              <ion-avatar item-left>
+                <img src="../assets/img/500-500.png" >
+              </ion-avatar>
+              <h2>欧式吸顶灯全铜灯具led美式客厅灯中式卧
+                室灯餐厅灯阳台灯玄关灯…</h2>
+              <!--没有规格显示区域-->
+              <p class="price">￥100.00</p>
+              <p class="num">×5</p>
+              <!--end 没有规格显示区域-->
+            </ion-item>
+            <!--有规格显示区域-->
+            <!--<ul>
+              <li>
+                <div class="spec-list">
+                  <dl>
+                    <dd>颜色：灰色</dd>
+                    <dd>尺码：XL</dd>
+                  </dl>
+                </div>
+                <div class="item">
+                  <p class="price">￥100.00</p>
+                  <p class="num">×5</p>
+                </div>
+              </li>
+              <li>
+                <div class="spec-list">
+                  <dl>
+                    <dd>颜色：灰色</dd>
+                    <dd>尺码：XL</dd>
+                  </dl>
+                </div>
+                <div class="item">
+                  <p class="price">￥100.00</p>
+                  <p class="num">×5</p>
+                </div>
+              </li>
+            </ul>-->
+            <!--end 有规格显示区域-->
+          </div>
+          <div class="total order-item order-item-btm">
+            <p>共7件商品 合计:<span class="sum">700.00</span>(含运费￥0.00)</p>
+          </div>
+        </div>
+        <ion-buttons class="btn">
+          <button ion-button class="secondary"  (click)="cancelOrder()" data-tap-disabled="true">取消订单</button>
+          <button ion-button >付款</button>
+        </ion-buttons>
+      </ion-card>
+      <ion-card  class="card shop-item">
+        <div (click)="openBuyOrderDetail()" data-tap-disabled="true">
+          <div class="total order-item">
+            <p class="key">订单编号：20187777888</p>
+            <p class="val ">待收货</p>
+          </div>
+          <div class="goods-item">
+            <ion-item class="item">
+              <ion-avatar item-left>
+                <img src="../assets/img/500-500.png" >
+              </ion-avatar>
+              <h2>欧式吸顶灯全铜灯具led美式客厅灯中式卧
+                室灯餐厅灯阳台灯玄关灯…</h2>
+              <!--没有规格显示区域-->
+              <p class="price">￥100.00</p>
+              <p class="num">×5</p>
+              <!--end 没有规格显示区域-->
+            </ion-item>
+            <!--有规格显示区域-->
+            <!--<ul>
+              <li>
+                <div class="spec-list">
+                  <dl>
+                    <dd>颜色：灰色</dd>
+                    <dd>尺码：XL</dd>
+                  </dl>
+                </div>
+                <div class="item">
+                  <p class="price">￥100.00</p>
+                  <p class="num">×5</p>
+                </div>
+              </li>
+              <li>
+                <div class="spec-list">
+                  <dl>
+                    <dd>颜色：灰色</dd>
+                    <dd>尺码：XL</dd>
+                  </dl>
+                </div>
+                <div class="item">
+                  <p class="price">￥100.00</p>
+                  <p class="num">×5</p>
+                </div>
+              </li>
+            </ul>-->
+            <!--end 有规格显示区域-->
+          </div>
+          <div class="total order-item order-item-btm">
+            <p>共7件商品 合计:<span class="sum">700.00</span>(含运费￥0.00)</p>
+          </div>
+        </div>
+        <ion-buttons class="btn">
+          <!--<button ion-button class="secondary" >取消订单</button>-->
+          <button ion-button (click)="confirmGoods()"  data-tap-disabled="true">确认收货</button>
+        </ion-buttons>
+      </ion-card>
+      <ion-card  class="card shop-item">
+        <div (click)="openBuyOrderDetail()" data-tap-disabled="true">
+          <div class="total order-item">
+            <p class="key">订单编号：20187777888</p>
+            <p class="val ">已完成</p>
+          </div>
+          <div class="goods-item">
+            <ion-item class="item">
+              <ion-avatar item-left>
+                <img src="../assets/img/500-500.png" >
+              </ion-avatar>
+              <h2>欧式吸顶灯全铜灯具led美式客厅灯中式卧
+                室灯餐厅灯阳台灯玄关灯…</h2>
+              <!--没有规格显示区域-->
+              <p class="price">￥100.00</p>
+              <p class="num">×5</p>
+              <!--end 没有规格显示区域-->
+            </ion-item>
+            <!--有规格显示区域-->
+            <!--<ul>
+              <li>
+                <div class="spec-list">
+                  <dl>
+                    <dd>颜色：灰色</dd>
+                    <dd>尺码：XL</dd>
+                  </dl>
+                </div>
+                <div class="item">
+                  <p class="price">￥100.00</p>
+                  <p class="num">×5</p>
+                </div>
+              </li>
+              <li>
+                <div class="spec-list">
+                  <dl>
+                    <dd>颜色：灰色</dd>
+                    <dd>尺码：XL</dd>
+                  </dl>
+                </div>
+                <div class="item">
+                  <p class="price">￥100.00</p>
+                  <p class="num">×5</p>
+                </div>
+              </li>
+            </ul>-->
+            <!--end 有规格显示区域-->
+          </div>
+          <div class="total order-item order-item-btm">
+            <p>共7件商品 合计:<span class="sum">700.00</span>(含运费￥0.00)</p>
+          </div>
+        </div>
+        <ion-buttons class="btn">
+          <!--<button ion-button class="secondary" >取消订单</button>-->
+          <!--<button ion-button >确认收货</button>-->
+        </ion-buttons>
+      </ion-card>
+      <ion-card  class="card shop-item">
+        <div (click)="openBuyOrderDetail()"  data-tap-disabled="true">
+          <div class="total order-item">
+            <p class="key">订单编号：20187777888</p>
+            <p class="val ">已关闭</p>
+          </div>
+          <div class="goods-item">
+            <ion-item class="item">
+              <ion-avatar item-left>
+                <img src="../assets/img/500-500.png" >
+              </ion-avatar>
+              <h2>欧式吸顶灯全铜灯具led美式客厅灯中式卧
+                室灯餐厅灯阳台灯玄关灯…</h2>
+              <!--没有规格显示区域-->
+              <p class="price">￥100.00</p>
+              <p class="num">×5</p>
+              <!--end 没有规格显示区域-->
+            </ion-item>
+            <!--有规格显示区域-->
+            <!--<ul>
+              <li>
+                <div class="spec-list">
+                  <dl>
+                    <dd>颜色：灰色</dd>
+                    <dd>尺码：XL</dd>
+                  </dl>
+                </div>
+                <div class="item">
+                  <p class="price">￥100.00</p>
+                  <p class="num">×5</p>
+                </div>
+              </li>
+              <li>
+                <div class="spec-list">
+                  <dl>
+                    <dd>颜色：灰色</dd>
+                    <dd>尺码：XL</dd>
+                  </dl>
+                </div>
+                <div class="item">
+                  <p class="price">￥100.00</p>
+                  <p class="num">×5</p>
+                </div>
+              </li>
+            </ul>-->
+            <!--end 有规格显示区域-->
+          </div>
+          <div class="total order-item order-item-btm">
+            <p>共7件商品 合计:<span class="sum">700.00</span>(含运费￥0.00)</p>
+          </div>
+        </div>
+        <ion-buttons class="btn">
+          <!--<button ion-button class="secondary" >取消订单</button>-->
+          <!--<button ion-button >确认收货</button>-->
+        </ion-buttons>
+      </ion-card>
+    </div>
+    <!--无线滚动-->
+    <!--<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content  loadingSpinner="bubbles"
+                                    loadingText="加载更多数据"></ion-infinite-scroll-content>
+    </ion-infinite-scroll>-->
+    <!--end：无线滚动-->
+  </ion-content>
+</ion-content>
